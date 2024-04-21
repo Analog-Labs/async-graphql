@@ -796,7 +796,7 @@ impl Registry {
         T::qualified_type_name()
     }
 
-    fn create_type<F: FnMut(&mut Registry) -> MetaType>(
+    pub fn create_type<F: FnMut(&mut Registry) -> MetaType>(
         &mut self,
         f: &mut F,
         name: &str,
